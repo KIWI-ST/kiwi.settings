@@ -83,5 +83,6 @@
     },
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "explorer.confirmDelete": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "python.pythonPath": "/usr/local/opt/python3/bin/python3.6"
 }
