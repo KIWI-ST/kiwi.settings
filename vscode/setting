@@ -13,12 +13,14 @@
     "git.confirmSync": false,
     "editor.fontSize": 16,
     "debug.inlineValues": true,
+    //关闭代码地图预览
     "editor.minimap.maxColumn": 0,
+    //
     "python.linting.pylintArgs": [
         "--errors-only"
     ],
     "files.exclude": {
-        "**/.github":true,
+        "**/.github": true,
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
@@ -45,7 +47,7 @@
                 }
             },
             {
-                "name": "React",
+                "name": "WebPack",
                 "type": "chrome",
                 "request": "launch",
                 "url": "http://localhost:8080",
@@ -76,13 +78,31 @@
                 "protocol": "inspector",
                 "request": "launch",
                 "name": "Node",
+                "cwd": "${workspaceFolder}/",
                 //"program":"${workspaceRoot}/debug/kiwi.gl.debug"
                 "program": "${file}"
+            },
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Mocha",
+                "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+                "args": [
+                    "-u",
+                    "tdd",
+                    "--timeout",
+                    "999999",
+                    "--colors",
+                    "${workspaceFolder}/test"
+                ],
+                "internalConsoleOptions": "openOnSessionStart"
             }
         ]
     },
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "explorer.confirmDelete": false,
     "git.autofetch": true,
-    "python.pythonPath": "/usr/local/opt/python3/bin/python3.6"
+    "explorer.confirmDragAndDrop": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.internalConsoleOptions": "openOnSessionStart"
 }
