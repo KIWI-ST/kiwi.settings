@@ -105,5 +105,5 @@
     "explorer.confirmDragAndDrop": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.internalConsoleOptions": "openOnSessionStart",
-     "editor.mouseWheelScrollSensitivity": 15
+    "editor.mouseWheelScrollSensitivity": 15
 }
