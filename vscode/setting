@@ -67,6 +67,12 @@
                 "cwd": "${workspaceRoot}",
                 "env": {},
                 "envFile": "${workspaceRoot}/.env",
+                "args":[
+                    "--data-dir=D:/Workspace/train",
+                    "--job-dir=D:/Workspace/tmp",
+                    "--num-gpus=0",
+                    "--train-steps=1000"
+                ],
                 "debugOptions": [
                     "WaitOnAbnormalExit",
                     "WaitOnNormalExit",
@@ -93,7 +99,7 @@
                     "--timeout",
                     "999999",
                     "--colors",
-                    "${workspaceFolder}/test"
+                    "${workspaceFolder}/test/**/*.spec.js"
                 ],
                 "internalConsoleOptions": "openOnSessionStart"
             }
@@ -105,5 +111,6 @@
     "explorer.confirmDragAndDrop": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.internalConsoleOptions": "openOnSessionStart",
-    "editor.mouseWheelScrollSensitivity": 15
+    "editor.mouseWheelScrollSensitivity": 1,
+    "python.linting.enabled": false
 }
