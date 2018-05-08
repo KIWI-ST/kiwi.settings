@@ -1,14 +1,14 @@
 {
     "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "window.zoomLevel": 1,
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "default",
     "files.autoSave": "afterDelay",
-    "terminal.integrated.rightClickCopyPaste": false,
+    // "terminal.integrated.rightClickCopyPaste": false,
     "terminal.integrated.cursorBlinking": true,
     "git.confirmSync": false,
     "editor.fontSize": 16,
@@ -36,15 +36,25 @@
         "version": "0.2.0",
         "configurations": [
             {
-                "type": "chrome",
-                "request": "attach",
-                "name": "Karma",
-                "address": "localhost",
-                "port": 9333,
-                "webRoot": "${workspaceRoot}",
-                "pathMapping": {
-                    "/base/": "${workspaceRoot}/"
-                }
+                "type": "node",
+                "protocol": "inspector",
+                "request": "launch",
+                "name": "Node",
+                "cwd": "${workspaceFolder}/",
+                "program": "${file}"
+            },
+            {
+                "type": "node",
+                "protocol": "inspector",
+                "request": "launch",
+                "name": "Node Exp",
+                "runtimeArgs": [
+                    // "--inspect=9229",
+                    // "--experimental-modules",
+                    "--nolazy"
+                ],
+                "cwd": "${workspaceFolder}",
+                "program": "${file}"
             },
             {
                 "name": "WebPack",
@@ -67,41 +77,17 @@
                 "cwd": "${workspaceRoot}",
                 "env": {},
                 "envFile": "${workspaceRoot}/.env",
-                "args":[
+                "args": [
                     "--data-dir=D:/Workspace/train",
                     "--job-dir=D:/Workspace/tmp",
                     "--num-gpus=0",
                     "--train-steps=1000"
                 ],
                 "debugOptions": [
-                    "WaitOnAbnormalExit",
-                    "WaitOnNormalExit",
+                    // "WaitOnAbnormalExit",
+                    // "WaitOnNormalExit",
                     "RedirectOutput"
                 ]
-            },
-            {
-                "type": "node",
-                "protocol": "inspector",
-                "request": "launch",
-                "name": "Node",
-                "cwd": "${workspaceFolder}/",
-                //"program":"${workspaceRoot}/debug/kiwi.gl.debug"
-                "program": "${file}"
-            },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Mocha",
-                "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-                "args": [
-                    "-u",
-                    "tdd",
-                    "--timeout",
-                    "999999",
-                    "--colors",
-                    "${workspaceFolder}/test/**/*.spec.js"
-                ],
-                "internalConsoleOptions": "openOnSessionStart"
             }
         ]
     },
@@ -112,5 +98,12 @@
     "debug.allowBreakpointsEverywhere": true,
     "debug.internalConsoleOptions": "openOnSessionStart",
     "editor.mouseWheelScrollSensitivity": 1,
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "terminal.integrated.rightClickBehavior": "default",
+    // "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --remote-debugging-port=9222",
+    "liveServer.settings.donotVerifyTags": true
 }
