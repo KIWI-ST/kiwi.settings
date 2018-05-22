@@ -50,8 +50,20 @@
                 "name": "Node Exp",
                 "runtimeArgs": [
                     // "--inspect=9229",
-                    // "--experimental-modules",
-                    "--nolazy"
+                    "--experimental-modules"
+                    // "--nolazy"
+                ],
+                "cwd": "${workspaceFolder}",
+                "program": "${file}"
+            },
+            {
+                "type": "node",
+                "protocol": "inspector",
+                "request": "launch",
+                "name": "Node Esm",
+                "runtimeArgs": [
+                    "-r",
+                    "esm"
                 ],
                 "cwd": "${workspaceFolder}",
                 "program": "${file}"
@@ -91,6 +103,7 @@
             }
         ]
     },
+    "typescript.autoImportSuggestions.enabled": false,
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "explorer.confirmDelete": false,
     "git.autofetch": true,
