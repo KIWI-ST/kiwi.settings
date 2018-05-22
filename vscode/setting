@@ -11,7 +11,7 @@
     // "terminal.integrated.rightClickCopyPaste": false,
     "terminal.integrated.cursorBlinking": true,
     "git.confirmSync": false,
-    "editor.fontSize": 16,
+    "editor.fontSize": 13,
     "debug.inlineValues": true,
     //关闭代码地图预览
     "editor.minimap.maxColumn": 0,
