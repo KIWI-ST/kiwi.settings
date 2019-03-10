@@ -1,24 +1,14 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "window.zoomLevel": 1,
-    "window.menuBarVisibility": "default",
+    "window.zoomLevel": 1.25,
+    "editor.fontSize": 15,
     "files.autoSave": "afterDelay",
-    // "terminal.integrated.rightClickCopyPaste": false,
     "terminal.integrated.cursorBlinking": true,
     "git.confirmSync": false,
-    "editor.fontSize": 13,
     "debug.inlineValues": true,
-    //关闭代码地图预览
     "editor.minimap.maxColumn": 0,
-    //
-    "python.linting.pylintArgs": [
-        "--errors-only"
-    ],
     "files.exclude": {
         "**/.github": true,
         "**/.git": true,
@@ -27,7 +17,6 @@
         "**/CVS": true,
         "**/.vscode": true,
         "**/.DS_Store": true,
-        // "**/.gitignore": true,
         "**/LICENSE": true,
         "**/node_modules": true,
         "**/deprecated": true
@@ -35,6 +24,13 @@
     "launch": {
         "version": "0.2.0",
         "configurations": [
+            {
+                "type": "chrome",
+                "request": "launch",
+                "name": "Chrome",
+                "url": "http://localhost:5500/examples/example.html",
+                "webRoot": "${workspaceFolder}"
+            },
             {
                 "type": "node",
                 "protocol": "inspector",
@@ -78,45 +74,20 @@
                 "sourceMapPathOverrides": {
                     "webpack:///src/*": "${webRoot}/*"
                 }
-            },
-            {
-                "name": "Python",
-                "type": "python",
-                "request": "launch",
-                "stopOnEntry": true,
-                // "pythonPath": "${config:python.pythonPath}",
-                "program": "${file}",
-                "cwd": "${workspaceRoot}",
-                "env": {},
-                "envFile": "${workspaceRoot}/.env",
-                "args": [
-                    "--data-dir=D:/Workspace/train",
-                    "--job-dir=D:/Workspace/tmp",
-                    "--num-gpus=0",
-                    "--train-steps=1000"
-                ],
-                "debugOptions": [
-                    // "WaitOnAbnormalExit",
-                    // "WaitOnNormalExit",
-                    "RedirectOutput"
-                ]
             }
         ]
     },
-    "typescript.autoImportSuggestions.enabled": false,
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "explorer.confirmDelete": false,
+    "explorer.confirmDelete": true,
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.internalConsoleOptions": "openOnSessionStart",
     "editor.mouseWheelScrollSensitivity": 1,
-    "python.linting.enabled": false,
     "terminal.integrated.rightClickBehavior": "default",
-    // "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.ChromeDebuggingAttachment": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --remote-debugging-port=9222",
-    "liveServer.settings.donotVerifyTags": true
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.view.alwaysShowHeaderActions": true
 }
