@@ -2,8 +2,8 @@
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
-    "window.zoomLevel": 1.25,
-    "editor.fontSize": 15,
+    "window.zoomLevel": 1,
+    "editor.fontSize": 14,
     "files.autoSave": "afterDelay",
     "terminal.integrated.cursorBlinking": true,
     "git.confirmSync": false,
@@ -65,19 +65,44 @@
                 "program": "${file}"
             },
             {
-                "name": "WebPack",
+                "name": "Vue-WebPack",
                 "type": "chrome",
                 "request": "launch",
                 "url": "http://localhost:8080",
                 "webRoot": "${workspaceRoot}/src",
-                "userDataDir": "${workspaceRoot}/.vscode/chrome",
+                "sourceMaps": true,
+                "breakOnLoad": true,
                 "sourceMapPathOverrides": {
-                    "webpack:///src/*": "${webRoot}/*"
+                    "webpack:///src/*": "${webRoot}/*",
+                    "webpack:///./src/*": "${webRoot}/*"
                 }
             }
         ]
     },
-    "explorer.confirmDelete": true,
+    "beautify.language": {
+        "js": {
+            "type": [
+                "javascript",
+                "json",
+                "jsonc"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautifyrc"
+            ]
+        },
+        "css": [
+            "css",
+            "less",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html",
+            "vue"
+        ]
+    },
+    "explorer.confirmDelete": false,
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "debug.allowBreakpointsEverywhere": true,
@@ -89,5 +114,6 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --remote-debugging-port=9222",
     "liveServer.settings.donotVerifyTags": true,
-    "workbench.view.alwaysShowHeaderActions": true
+    "workbench.view.alwaysShowHeaderActions": true,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
