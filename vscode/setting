@@ -2,7 +2,7 @@
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.fontSize": 14,
     "files.autoSave": "afterDelay",
     "terminal.integrated.cursorBlinking": true,
@@ -30,9 +30,26 @@
             {
                 "type": "chrome",
                 "request": "launch",
-                "name": "Chrome",
+                "name": "Chrome 8080",
                 "url": "http://localhost:8080/",
                 "webRoot": "${workspaceFolder}"
+            },
+            {
+                "type": "chrome",
+                "request": "launch",
+                "name": "Chrome 5500",
+                "url": "http://localhost:5500/examples/example.html",
+                "webRoot": "${workspaceFolder}"
+            },
+            {
+                "type": "chrome",
+                "request": "launch",
+                "name": "Chrome NG",
+                "url": "http://localhost:4200",
+                "webRoot": "${workspaceFolder}",
+                "sourceMaps": true,
+                "trace": true,
+                "userDataDir": "${workspaceFolder}/.vscode/chrome"
             },
             {
                 "type": "node",
@@ -120,5 +137,5 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     //GUN Global
-    "codegnuglobal.executable": "D:\\Share\\Work\\GUNGlobal\\bin\\global.exe",
+    "codegnuglobal.executable": "D:\\Share\\Work\\GUNGlobal\\bin\\global.exe"
 }
