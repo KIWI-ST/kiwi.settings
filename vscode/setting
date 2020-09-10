@@ -30,15 +30,16 @@
             {
                 "type": "chrome",
                 "request": "launch",
-                "name": "Chrome 8080",
-                "url": "http://localhost:8080/",
-                "webRoot": "${workspaceFolder}"
+                "name": "Chrome Canary",
+                "url": "http://localhost:5500/examples/example.html",
+                "webRoot": "${workspaceFolder}",
+                "runtimeExecutable": "C:/Users/AXMAND/AppData/Local/Google/Chrome SxS/Application/chrome.exe"
             },
             {
                 "type": "chrome",
                 "request": "launch",
-                "name": "Chrome 5500",
-                "url": "http://localhost:5500/examples/example.html",
+                "name": "Chrome",
+                "url": "http://localhost:8080/",
                 "webRoot": "${workspaceFolder}"
             },
             {
@@ -57,31 +58,6 @@
                 "request": "launch",
                 "name": "Node",
                 "cwd": "${workspaceFolder}/",
-                "program": "${file}"
-            },
-            {
-                "type": "node",
-                "protocol": "inspector",
-                "request": "launch",
-                "name": "Node Exp",
-                "runtimeArgs": [
-                    // "--inspect=9229",
-                    "--experimental-modules"
-                    // "--nolazy"
-                ],
-                "cwd": "${workspaceFolder}",
-                "program": "${file}"
-            },
-            {
-                "type": "node",
-                "protocol": "inspector",
-                "request": "launch",
-                "name": "Node Esm",
-                "runtimeArgs": [
-                    "-r",
-                    "esm"
-                ],
-                "cwd": "${workspaceFolder}",
                 "program": "${file}"
             },
             {
