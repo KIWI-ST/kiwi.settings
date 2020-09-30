@@ -10,19 +10,20 @@
     "debug.inlineValues": true,
     "editor.minimap.maxColumn": 0,
     "files.exclude": {
+        "**/.cache": true,
         "**/.DS_Store": true,
         "**/.git": true,
         "**/.github": true,
         "**/.hg": true,
         "**/.svn": true,
-        "**/.vscode": true,
         "**/CVS": true,
         "**/deprecated": true,
         "**/GPATH": true,
         "**/GRTAGS": true,
         "**/GTAGS": true,
         "**/LICENSE": true,
-        "**/node_modules": true
+        "**/node_modules": true,
+        "dist": true
     },
     "launch": {
         "version": "0.2.0",
@@ -38,9 +39,14 @@
             {
                 "type": "chrome",
                 "request": "launch",
-                "name": "Chrome",
-                "url": "http://localhost:8080/",
-                "webRoot": "${workspaceFolder}"
+                "name": "Chrome Parcel",
+                "url": "http://localhost:1234/dist/example.html",
+                "runtimeExecutable": "C:/Users/AXMAND/AppData/Local/Google/Chrome SxS/Application/chrome.exe",
+                "webRoot": "${workspaceFolder}",
+                "breakOnLoad": true,
+                "sourceMapPathOverrides": {
+                    "../*": "${webRoot}/*"
+                }
             },
             {
                 "type": "chrome",
@@ -113,5 +119,11 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     //GUN Global
-    "codegnuglobal.executable": "D:\\Share\\Work\\GUNGlobal\\bin\\global.exe"
+    "codegnuglobal.executable": "D:\\Share\\Work\\GUNGlobal\\bin\\global.exe",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript"
+    ],
 }
